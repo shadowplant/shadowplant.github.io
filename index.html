@@ -2,56 +2,315 @@
 <html lang="en">
 
 <head>
-    <title>Oh Crab</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oh Crab</title>
+  <link rel="stylesheet" href="stylecrab.css">
+  <script src="script.js" defer></script>
+  <link rel="icon" type="image/png" href="images/crab.jpg" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="some web app!!!">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
-    <div class="header">
-        <h1>The Fasinating World of Crabs</h1>
-        <p>Welcome</p>
+  <div class="header">
+    <h1>The Fasinating World of Crabs</h1>
+    <p>Welcome</p>
+  </div>
+
+  <nav class="navbar">
+    <button id="hamburgermenu">Menu</button> <!--hamburgermenu that activates on phone -->
+    <ul>
+      <li>
+        <button id="CrabSection1"> What Are Crabs | </button>
+      </li>
+      <li><button id="CrabSection2"> In the Wild | </button></li>
+      <li><button id="CrabSection3"> Fun Facts | </button></li>
+      <li><button id="CrabSection4"> Delicacies around Singapore | </button></li>
+      <li><button id="CrabSection5"> Crab Game | </button></li>
+    </ul>
+  </nav>
+
+
+  <div id="crabcontainer">
+    <div class="crab" id="crab1">
+
+      <h2>What Are Crabs?</h2>
+      <p>
+        Crabs are Crustaceans that live in bodies of oceanwater, freshwater or on land, They belong under the Infraorder
+        Brachyura,
+        which in short tail in greek, meaning they crabs have tails. Crabs are generally cover with a thick exoskeleton
+        made from chitin,
+        which is used in the exoskeleton of insects as well. They grow by molding their shells as the shell does not
+        change in size, so periodically the
+        shed the shell to make brand new bigger shells to fit them as they grow, like clothes for us when we grow older.
+
+        They also have a pair of pincers that are used to hunt for food or defend themselves from predators.
+      </p>
+
+      <div class="row">
+        <div class="column">
+          <img src="images/blue_crab.jpg" alt="Crab Pincers" onclick="myFunction(this);">
+          <!-- has the onclick function to trigger when pressed on -->
+        </div>
+        <div class="column">
+          <img src="images/Crab_legs.jpg" alt="Crab legs" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="images/crab_tail.jpg" alt="Crab tail " onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="images/crabmolting.jpg" alt="Molting Crabs" onclick="myFunction(this);">
+        </div>
+      </div>
+
+      <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="expandedImg">
+        <div id="imgtext"></div>
+      </div>
+
+      <!-- <p>
+                Crabs are generally cover with a thick exoskeleton made from chitin, 
+                which is used in the exoskeleton of insects as well. They grow by molding their shells as the shell does not change in size, so periodically the 
+                shed the shell to make brand new bigger shells to fit them as they grow, like clothes for us when we grow older.
+
+                They also have a pair of pincers that are used to hunt for food or defend themselves from predators.
+            </p> -->
+    </div>
+    <div class="crab" id="crab2">
+
+      <h1>How Crabs are in the wild?</h1>
+      <p>
+        In the wild, crabs exhibit a wide range of behaviors and interactions with their environment.
+        Their specific behavior and lifestyle can vary depending on the species of crab and the type of habitat they
+        inhabit,
+        whether it's marine (saltwater) or freshwater environments. Here are some common characteristics and behaviors
+        of crabs in the wild:
+      </p>
+      <br>
+      <br>
+      <br>
+      <h2>Foraging</h2>
+      <img src="images/crabforaging.jpg" alt="crab hunting">
+
+      <p>
+        Crabs use their pincers to forage or hunt for food, their pincers grab onto anything that is within range and
+        applies force onto
+        the target. Some just grab their prey and start consumption while others use their crushing claw to break the
+        shell or bones to feast
+        onto the soft meat.
+      </p>
+      <br>
+      <br>
+      <br>
+      <h2>Burrowing and Molting</h2>
+      <div class="align">
+
+        <img src="images/molt_series_SG.jpg" alt="crab molting">
+        <img src="images/burrowing.jpg" alt="crab molting">
+
+      </div>
+
+      <p>
+        Crabs require molting as since they are Crustaceans, they are unable to grow their shell as it is made from non
+        organic matter that is hard to break,
+        so it has to molt away its old shell and make a new one that is bigger for it to grow. After it finishes the
+        molting process, it is at its weakest as the
+        shell of the newly molted crab has not hardened yet, making it soft and easy prey to predators, this is why
+        crabs burrow underground.
+        Crabs burrow underground as a defense mechanism to hide from predators or ambush unsuspecting prey, they are
+        able to burrow underground by using their
+        hindlegs and claws to dig the sand or ground out and pull themselves deeper into the substrate.
+      </p>
+
+      <br>
+      <br>
+      <br>
+      <h2>Reproduction</h2>
+
+      <img src="images/crabdance.gif" width="800" height="450">
+
+      <p>
+        The Male Crab engage in various courtship behaviors to attract female mates.
+        These courtship displays can include waving their claws, performing dance-like
+        movements, producing sounds, or releasing pheromones.
+      </p>
+
+    </div>
+    <div class="crab" id="crab3">
+      <h1>Fun facts about crabs!</h1>
+
+      <div class="rowcollapsible">
+
+        <div class="columncollapsible">
+          <button type="button" class="collapsible">
+            <h1>Fun Fact 1: Swimming</h1>
+          </button>
+          <div class="content">
+            <p>
+              Though most crabs live near bodies of water or in the water, only a select few can actually swim
+            </p>
+          </div>
+        </div>
+
+        <div class="columncollapsible">
+          <button type="button" class="collapsible">
+            <h1>Fun Fact 2: Types of Crabs</h1>
+          </button>
+          <div class="content">
+            <p>
+              There are two distinct types of crabs: true crabs and false crabs, true crabs belong under the Brachyurans
+              Infraorder, they will always have
+              a very short abdomen and 10 legs.
+              False Crabs on the order hand has belongs under the Anomuran Infraorder, they have a longer abdominal
+              section with fewer walking legs compared to the true ones.
+              Some examples are Hermit crabs and King Crabs.
+            </p>
+          </div>
+        </div>
+
+        <div class="columncollapsible">
+          <button type="button" class="collapsible">
+            <h1>Fun Fact 3: Crabs Legs</h1>
+          </button>
+          <div class="content">
+            <p>
+              All True Crabs have 10 legs, 8 for walking and the other 2 being their pincers
+            </p>
+          </div>
+        </div>
+
+        <div class="columncollapsible">
+          <button type="button" class="collapsible">
+            <h1>Fun Fact 4: Crabs Movement</h1>
+          </button>
+          <div class="content">
+            <p>
+              Their legs are positioned in such a way that they can only move sideways, making them ideal for navigating
+              the rocky terrain of the ocean floor and evade predators by changing direction quickly
+            </p>
+          </div>
+        </div>
+
+
+        <div class="columncollapsible">
+          <button type="button" class="collapsible">
+            <h1>Fun Fact 5: Crab diet</h1>
+          </button>
+          <div class="content">
+            <p>
+              Crabs are omnivorous creatures, in the wild their diet consists of small fish, algae and other crabs.
+              However, in captivity crabs can eat numerous food that
+              we humans eat, like vegetables, meat and fruits. They can also eat snacks like chips but it's not
+              recommanded as it lacks nutrients and is generally unhealthy for us or them.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="columncollapsible">
+          <button type="button" class="collapsible">
+            <h1>Fun Fact 6: Crabs healing factor</h1>
+          </button>
+          <div class="content">
+            <p>
+              Crabs have the ability to regenerate missing limbs. They first store up a ton of energy within their body,
+              then they expand it out to during the molding process to regrow their limbs, this spans across multiple
+              molting
+              section and it will not be exactly the same as the original limb. It is also only found in certain species
+              of crab so not all crabs have this healing factor.
+            </p>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <nav>
-        <button id="hamburger-menu">Menu</button>
-        <ul>
-            <li><a href="Crab-Section-1"> What Are Crabs </a></li>
-            <li><a href="Crab-Section-2"> How They Are in the Wild</a></li>
-            <li><a href="Crab-Section-3"> Species of Crabs and their history</a></li>
-            <li><a href="Crab-Section-4"> Fantastic Creatures and where to find them</a></li>
-            <li><a href="Crab-Section-5"> Fun Facts</a></li>
-            <li><a href="Crab-Section-6"> Delicacies around the World</a></li>
-            <li><a href="Crab-Section-7"> Crabtastic Quiz</a></li>
-        </ul>
-    </nav>
 
+    <div class="crab" id="crab4">
+      <div class="delicacies">
+        <h1>Top 3 Crab delicacies in Singpore!</h1>
+        <br>
+        <h1>#1 Chili Crab</h1>
+        <br>
+        <img src="images/chilicrab.jpg" alt="chili crab">
+        <p>
+          Crabs are Crustaceans that live in bodies of oceanwater, freshwater or on land, They belong under the
+          Infraorder
+          Brachyura,
+          which in short tail in greek, meaning they crabs have tails. Crabs are generally cover with a thick
+          exoskeleton
+          made from chitin,
+          which is used in the exoskeleton of insects as well. They grow by molding their shells as the shell does not
+          change in size, so periodically the
+          shed the shell to make brand new bigger shells to fit them as they grow, like clothes for us when we grow
+          older.
 
-    <div id="crabcontainer">
-        <div class="Crab" id="Crab1">
-            page 1 content
-        </div>
-        <div class="Crab" id="Crab2">
-            page 2 content
-        </div>
-        <div class="Crab" id="Crab3">
-            page 3 content
-        </div>
-        <div class="Crab" id="Crab4">
-            page 4 content
-        </div>
-        <div class="Crab" id="Crab5">
-            page 5 content
-        </div>
-        <div class="Crab" id="Crab6">
-            page 6 content
-        </div>
-        <div class="Crab" id="Crab7">
-            page 7 content
-        </div>
+          They also have a pair of pincers that are used to hunt for food or defend themselves from predators.
+        </p>
 
+        <br>
+        <h1>#2 Crab Bee Hoon</h1>
+        <br>
+        <img src="images/crabbeehoon.jpg" alt="crab bee hoon">
+        <p>
+          Crabs are Crustaceans that live in bodies of oceanwater, freshwater or on land, They belong under the
+          Infraorder
+          Brachyura,
+          which in short tail in greek, meaning they crabs have tails. Crabs are generally cover with a thick
+          exoskeleton
+          made from chitin,
+          which is used in the exoskeleton of insects as well. They grow by molding their shells as the shell does not
+          change in size, so periodically the
+          shed the shell to make brand new bigger shells to fit them as they grow, like clothes for us when we grow
+          older.
+
+          They also have a pair of pincers that are used to hunt for food or defend themselves from predators.
+        </p>
+
+        <br>
+        <h1>#3 Salted Egg Crab</h1>
+        <br>
+        <img src="images/saltedeggcrab.jpg" alt="salted egg crab">
+        <p>
+          Crabs are Crustaceans that live in bodies of oceanwater, freshwater or on land, They belong under the
+          Infraorder
+          Brachyura,
+          which in short tail in greek, meaning they crabs have tails. Crabs are generally cover with a thick
+          exoskeleton
+          made from chitin,
+          which is used in the exoskeleton of insects as well. They grow by molding their shells as the shell does not
+          change in size, so periodically the
+          shed the shell to make brand new bigger shells to fit them as they grow, like clothes for us when we grow
+          older.
+
+          They also have a pair of pincers that are used to hunt for food or defend themselves from predators.
+        </p>
+      </div>
     </div>
+
+
+    <div class="crab" id="crab5">
+      <div id="game">
+        <div id="character"></div>
+        <div id="block"></div>
+      </div>
+      <button type="button" class="controls">Jump</button>
+      <button type="button" class="restartgame">Reset</button>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2023 Oh Crab - All rights reserved.</p>
+  </footer>
 
 </body>
 
