@@ -45,17 +45,12 @@ const menuItemsList = document.querySelector("nav ul");
 
 
 function toggleMenus() {
-
-
     if (menuItemsList.style.display == "block")
         menuItemsList.style.display = "none";
     else menuItemsList.style.display = "block";
-
-
 }
 
-function updateMenuDisplay() {
-
+function updateMenuDisplay() { /* a function to ensure that the menu glitch does not occur*/
     if (screenWidth > 800 && menuItemsList.style.display == "none") {
         menuItemsList.style.display = "block";
     }
@@ -65,15 +60,15 @@ function updateMenuDisplay() {
     }
 }
 
-// add the event listener to update the list when display size
-updateMenuDisplay();
-window.addEventListener("resize", updateMenuDisplay);
+// add the event listener to update the list when display size changes
+updateMenuDisplay(); /* triggers it once*/
+window.addEventListener("resize", updateMenuDisplay);/* triggers it each time window is resized*/
 
 function myFunction(imgs) {
-    var expandImg = document.getElementById("expandedImg");
-    var imgText = document.getElementById("imgtext");
-    expandImg.src = imgs.src;
-    imgText.innerHTML = imgs.alt;
+    var expandImg = document.getElementById("expandedImg"); //get the expanding by the  id
+    var imgText = document.getElementById("imgtext"); //get the imgtextby the  id
+    expandImg.src = imgs.src; //get the img for the expanded img via the img.src
+    imgText.innerHTML = imgs.alt; //get the text for the expanded img via the img.alt
     expandImg.parentElement.style.display = "block";
 }
 
@@ -83,13 +78,12 @@ var coll = document.getElementsByClassName("collapsible");
 var i;
 
 for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display == "block") {
+    coll[i].addEventListener("click", function () { 
+        var content = this.nextElementSibling; //get the next div class which is content
+        if (content.style.display == "block") { // if it is being displayed already then remove
             content.style.display = "none";
         } else {
-            content.style.display = "block";
+            content.style.display = "block"; // otherwise display the content
         }
     });
 }
@@ -97,19 +91,19 @@ for (i = 0; i < coll.length; i++) {
 var character = document.getElementById("character");
 var block = document.getElementById("block");
 
-function jump() {
-    if (character.classList != "animate") {
-        character.classList.add("animate");
+function jump() { // a jump function to let the character jump when triggered
+    if (character.classList != "animate") { //to check if the animate class is not on the character already so that cannot spam the jump button
+        character.classList.add("animate"); //add the animate class to the character when jump is not active
     }
-    setTimeout(function () {
-        character.classList.remove("animate");
+    setTimeout(function () { // have a timeout function to trigger after 500ms, same as the animate class
+        character.classList.remove("animate"); // removes the animate class once animation is complete such that it does not keep jumping infinitely
     }, 500);
 }
 
 function restartgame() {
     // Remove the animation class from the character
-    character.classList.remove("animate");
-    
+    character.classList.remove("animate"); //remove the animation from character 
+
     // Reset the block position and animation such that reset can trigger before game end
     block.style.animation = "none";
     block.style.display = "none";
@@ -123,28 +117,24 @@ function restartgame() {
 
 
 const controls = document.querySelector(".controls"); // Corrected selector
-controls.addEventListener("click", jump); 
+controls.addEventListener("click", jump);
 // Added event listener for click
 
+var checkdead = setInterval(function () { //have it check whether character has touch the enemy 
+    var characterTop =
+        parseInt(window.getComputedStyle(character).
+            getPropertyValue("top")); // get the top value of the character
 
-var checkdead = setInterval(function(){
-    var characterTop = 
-    parseInt(window.getComputedStyle(character).
-    getPropertyValue("top"));
+    var blockleft =
+        parseInt(window.getComputedStyle(block).
+            getPropertyValue("left"));// get the left value of the enemy
 
-    var blockleft = 
-    parseInt(window.getComputedStyle(block).
-    getPropertyValue("left"));
-
-    if((blockleft<175 && blockleft>75) && characterTop >= 270)
-    {
-        block.style.animation = "none";
-        block.style.display = "none";
-
+    if ((blockleft < 175 && blockleft > 75) && characterTop >= 270) { // checks whether the enemy is touching the character
+        block.style.animation = "none"; //remove animation
+        block.style.display = "none";//remove block
     }
 })
 
 
-const restart= document.querySelector(".restartgame"); // Corrected selector
-restart.addEventListener("click", restartgame); 
-// Added event listener for click
+const restart = document.querySelector(".restartgame");
+restart.addEventListener("click", restartgame);
