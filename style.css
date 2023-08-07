@@ -99,6 +99,17 @@ img {/* class type*/
   padding-left: 15%;
 }
 
+.box{
+  width: auto;
+ }
+ 
+ .box img {
+   max-width: 100%;
+   width: 50%;
+   height: auto; /* vary this to your needs ie auto, 100%, etc */
+   margin: 0 auto;
+ }
+
 
 /* Style the crab sections */
 .crab {
@@ -123,7 +134,7 @@ img {/* class type*/
 .columncollapsible {
   float: left;
   width: 35%;
-  padding: 30px;
+  padding: 10px;
   padding-left: 175px;
   min-height: 200px;
 }
@@ -261,4 +272,27 @@ animation: jump 500ms;
       nav ul {
           display: none;
       }
+
+      .box{
+        width: auto;
+       }
+       
+       .box img {
+         max-width: 100%;
+         width: 100%;
+         padding:0px;
+         height: auto; /* vary this to your needs ie auto, 100%, etc */
+         margin: 0 auto;
+       }
+
+       .columncollapsible {
+        width: 100%;
+        padding: 10px;
+        min-height: 0px;
+      }
+
+      /* Style the collapsible content. Note: hidden by default */
+.content p{
+  font-size: 20px;
+}
   }
