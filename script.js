@@ -117,7 +117,7 @@ function restartgame() {
     setTimeout(function () {
         block.style.animation = "block 3s infinite"; // Apply the animation, same as the one in the css file
         block.style.display = "block"; // Make the block visible
-        block.style.left = "1970px"; // Reset the block's left position
+        block.style.left = "100%"; // Reset the block's left position
     }, 100);
 }
 
@@ -139,7 +139,7 @@ var checkdead = setInterval(function(){
     {
         block.style.animation = "none";
         block.style.display = "none";
-        alert("u lose")
+
     }
 })
 
