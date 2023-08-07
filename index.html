@@ -28,7 +28,7 @@
     <button id="hamburgermenu">Menu</button> <!--hamburgermenu that activates on phone -->
     <ul>
       <li>
-        <button id="CrabSection1"> What Are Crabs | </button>
+        <button id="CrabSection1"> What Are Crabs | </button> <!-- all the sections available-->
       </li>
       <li><button id="CrabSection2"> In the Wild | </button></li>
       <li><button id="CrabSection3"> Fun Facts | </button></li>
@@ -38,7 +38,7 @@
   </nav>
 
 
-  <div id="crabcontainer">
+  <div id="crabcontainer"> <!-- all section go  under this crab container for simplicity-->
     <div class="crab" id="crab1">
 
       <h2>What Are Crabs?</h2>
@@ -54,7 +54,7 @@
         They also have a pair of pincers that are used to hunt for food or defend themselves from predators.
       </p>
 
-      <div class="row">
+      <div class="row"> <!-- a row class such that all the images can fit in a column so easier to trigger-->
         <div class="column">
           <img src="images/blue_crab.jpg" alt="Crab Pincers" onclick="myFunction(this);">
           <!-- has the onclick function to trigger when pressed on -->
@@ -72,18 +72,14 @@
 
       <div class="container">
         <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-        <img id="expandedImg">
+        <!-- having a span here to trigger this onclick event-->
+        <img id="expandedImg" alt="bigimage">
+        <!-- chosen image from the onclick will be displayed bigger here-->
         <div id="imgtext"></div>
+        <!-- just a small description of what the image is about-->
       </div>
-
-      <!-- <p>
-                Crabs are generally cover with a thick exoskeleton made from chitin, 
-                which is used in the exoskeleton of insects as well. They grow by molding their shells as the shell does not change in size, so periodically the 
-                shed the shell to make brand new bigger shells to fit them as they grow, like clothes for us when we grow older.
-
-                They also have a pair of pincers that are used to hunt for food or defend themselves from predators.
-            </p> -->
     </div>
+
     <div class="crab" id="crab2">
 
       <h1>How Crabs are in the wild?</h1>
@@ -98,9 +94,9 @@
       <br>
       <br>
       <h2>Foraging</h2>
-      <div class="box">
-      <img src="images/crabforaging.jpg" alt="crab hunting">
-    </div>
+      <div class="box"> <!-- add a box class such that it's different when resize the window and phone-->
+        <img src="images/crabforaging.jpg" alt="crab hunting">
+      </div>
       <p>
         Crabs use their pincers to forage or hunt for food, their pincers grab onto anything that is within range and
         applies force onto
@@ -112,7 +108,7 @@
       <br>
       <br>
       <h2>Burrowing and Molting</h2>
-      <div class="align">
+      <div class="align"> <!-- an align class here for that the image align side by side even if screen size change-->
 
         <img src="images/molt_series_SG.jpg" alt="crab molting">
         <img src="images/burrowing.jpg" alt="crab molting">
@@ -136,8 +132,8 @@
       <br>
       <h2>Reproduction</h2>
       <div class="box">
-      <img src="images/crabdance.gif" width="800" height="450">
-    </div>
+        <img src="images/crabdance.gif" alt="dancing crab" width="800" height="450"> <!-- easy gif that also has the box class to change size according to the screen size-->
+      </div>
       <p>
         The Male Crab engage in various courtship behaviors to attract female mates.
         These courtship displays can include waving their claws, performing dance-like
@@ -148,12 +144,12 @@
     <div class="crab" id="crab3">
       <h1>Fun facts about crabs!</h1>
 
-      <div class="rowcollapsible">
+      <div class="rowcollapsible"> <!-- having collapsibles to make it more interesting and neater-->
 
         <div class="columncollapsible">
           <button type="button" class="collapsible">
-            <h1>Fun Fact 1: Swimming</h1>
-          </button>
+            <h1> Fun Fact 1: Swimming</h1>
+            </button>
           <div class="content">
             <p>
               Though most crabs live near bodies of water or in the water, only a select few can actually swim
@@ -164,7 +160,7 @@
         <div class="columncollapsible">
           <button type="button" class="collapsible">
             <h1>Fun Fact 2: Types of Crabs</h1>
-          </button>
+            </button>
           <div class="content">
             <p>
               There are two distinct types of crabs: true crabs and false crabs, true crabs belong under the Brachyurans
@@ -178,9 +174,9 @@
         </div>
 
         <div class="columncollapsible">
-          <button type="button" class="collapsible">
-            <h1>Fun Fact 3: Crabs Legs</h1>
-          </button>
+          <h1><button type="button" class="collapsible">
+            <h1> Fun Fact 3: Crabs Legs</h1>
+            </button>
           <div class="content">
             <p>
               All True Crabs have 10 legs, 8 for walking and the other 2 being their pincers
@@ -190,8 +186,8 @@
 
         <div class="columncollapsible">
           <button type="button" class="collapsible">
-            <h1>Fun Fact 4: Crabs Movement</h1>
-          </button>
+            <h1> Fun Fact 4: Crabs Movement</h1>
+            </button>
           <div class="content">
             <p>
               Their legs are positioned in such a way that they can only move sideways, making them ideal for navigating
@@ -203,8 +199,8 @@
 
         <div class="columncollapsible">
           <button type="button" class="collapsible">
-            <h1>Fun Fact 5: Crab diet</h1>
-          </button>
+            <h1> Fun Fact 5: Crab diet</h1>
+            </button>
           <div class="content">
             <p>
               Crabs are omnivorous creatures, in the wild their diet consists of small fish, algae and other crabs.
@@ -218,8 +214,8 @@
 
         <div class="columncollapsible">
           <button type="button" class="collapsible">
-            <h1>Fun Fact 6: Crabs healing factor</h1>
-          </button>
+            <h1> Fun Fact 6: Crabs healing factor</h1>
+            </button>
           <div class="content">
             <p>
               Crabs have the ability to regenerate missing limbs. They first store up a ton of energy within their body,
@@ -241,51 +237,55 @@
         <br>
         <h1>#1 Chilli Crab</h1>
         <br>
-        <div class = "box">
-        <img src="images/chilicrab.jpg" alt="chili crab">
-      </div>
+        <div class="box">
+          <img src="images/chilicrab.jpg" alt="chili crab">
+        </div>
         <p>
-          Chilli crab is a popular seafood dish among locals and foreigners in Singapore, and consists of mud crabs deep-fried in a sweet, savoury and spicy gravy.1 It has been referred to in various food publications as Singapore’s national seafood dish or even Singapore’s national dish.
+          Chilli crab is a popular seafood dish among locals and foreigners in Singapore, and consists of mud crabs
+          deep-fried in a sweet, savoury and spicy gravy.1 It has been referred to in various food publications as
+          Singapore’s national seafood dish or even Singapore’s national dish.
         </p>
 
         <br>
         <h1>#2 Crab Bee Hoon</h1>
         <br>
         <div class="box">
-        <img src="images/crabbeehoon.jpg" alt="crab bee hoon">
+          <img src="images/crabbeehoon.jpg" alt="crab bee hoon">
+        </div>
       </div>
-      </div>
-        <p>
-          Crab Bee Hoon is a Singaporean rice vermicelli dish with whole mud crab served in a claypot and aromatic milky broth. Bee Hoon or rice noodle has the ability to soak up the stock from any dish and that’s one of the main reasons it is so popular among the locals!
-        </p>
+      <p>
+        Crab Bee Hoon is a Singaporean rice vermicelli dish with whole mud crab served in a claypot and aromatic milky
+        broth. Bee Hoon or rice noodle has the ability to soak up the stock from any dish and that’s one of the main
+        reasons it is so popular among the locals!
+      </p>
 
-        <br>
-        <h1>#3 Salted Egg Crab</h1>
-        <br>
-        <div class="box">
+      <br>
+      <h1>#3 Salted Egg Crab</h1>
+      <br>
+      <div class="box">
         <img src="images/saltedeggcrab.jpg" alt="salted egg crab">
       </div>
-        <p>
-          Salted Egg crab is a popular seafood dish among locals and foreigners in Singapore too, similar to the chilli crab, the salted egg crab consists of mud crabs deep-fried in a batter with butter and salted egg yolk
-        </p>
-      </div>
+      <p>
+        Salted Egg crab is a popular seafood dish among locals and foreigners in Singapore too, similar to the chilli
+        crab, the salted egg crab consists of mud crabs deep-fried in a batter with butter and salted egg yolk
+      </p>
     </div>
 
 
     <div class="crab" id="crab5">
-      <div id="game">
-        <div id="character"></div>
-        <div id="block"></div>
+      <div id="game"> <!-- for the border of the game -->
+        <div id="character"></div><!-- for the character of the game -->
+        <div id="block"></div><!-- for the enemies of the game -->
       </div>
-      <button type="button" class="controls">Jump</button>
-      <button type="button" class="restartgame">Reset</button>
+      <button type="button" class="controls">Jump</button><!-- for the controls of the game -->
+      <button type="button" class="restartgame">Reset</button><!-- to restart the game -->
     </div>
 
   </div>
 
   <footer class="footer">
-    <p>&copy; 2023 Oh Crab - All rights reserved.</p>
-    <img src="images/frame.png" alt="QR code">
+    <p>&copy; 2023 Oh Crab - All rights reserved.</p> <!--trademark for my website, all my hardwork -->
+    <img src="images/frame.png" alt="QR code"><!-- QR code to enter mobile -->
   </footer>
 
 </body>
