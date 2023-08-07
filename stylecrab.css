@@ -56,10 +56,7 @@ button {
   border-bottom: 2px solid #eb8181;
 }
 
-/* ... Your existing media queries and other styles ... */
-
 img {
-  /* class type*/
   width: 30%;
   padding: 20px;
 }
@@ -74,14 +71,14 @@ img {
   width: 25%;
 }
 
-/* Style the images inside the grid */
-.column img {
+
+.column img { /* the images when not chosen or hovered over*/
   opacity: 0.8;
   cursor: pointer;
   width: 80%
 }
 
-.column img:hover {
+.column img:hover {/* the images when hovered over*/
   opacity: 1;
 }
 
@@ -98,17 +95,17 @@ img {
   display: none;
 }
 
-.container img {
+.container img { /*the expanded image*/
   width: 70%;
   padding-left: 15%;
 }
 
-.box {
+.box { /* set the box to auto so it scales with the screen size*/
   width: auto;
 }
 
 .box img {
-  max-width: 100%;
+  max-width: 100%;/* set the max width to 100% so it does not become to big*/
   width: 50%;
   height: auto;
   /* vary this to your needs ie auto, 100%, etc */
@@ -136,7 +133,7 @@ img {
   text-align: justify;
 }
 
-.columncollapsible {
+.columncollapsible { /*div class*/
   float: left;
   width: 35%;
   padding: 10px;
@@ -144,11 +141,11 @@ img {
   min-height: 200px;
 }
 
-.collapsible {
+.collapsible { /*button class*/
   display: flex;
   background-color: rgb(255, 94, 0);
   color: black;
-  cursor: pointer;
+  cursor: pointer;/*have a cursor pointer so that users know to click on it for desktop*/
   width: 100%;
   padding: 20px;
   border: none;
@@ -157,13 +154,14 @@ img {
   justify-content: space-around;
 }
 
-/* Style the collapsible content. Note: hidden by default */
+/* content hidden by default */
 .content {
   padding: 0 18px;
   display: none;
   background-color: rgb(255, 94, 0);
 }
 
+/* Clear floats after the columns */
 .rowcollapsible:after {
   content: "";
   display: table;
@@ -177,7 +175,7 @@ body {
 }
 
 
-.footer {
+.footer { /* footer here cause got nothing else*/
   background-color: #3dbc96;
   color: white;
   text-align: center;
@@ -197,24 +195,24 @@ body {
   width: 50%
 }
 
-#game {
+#game { /* game outline*/
   width: 100%;
   height: 400px;
   border: 1px solid black;
 }
 
-#block {
+#block { /* enemies spawn position and color*/
   width: 30px;
   height: 30px;
   background-color: pink;
-  position: relative;
+  position: relative; 
   top: 270px;
   left: 100%;
   animation: block 3s infinite;
   /* for the block to move within the given time frame*/
 }
 
-#character {
+#character {  /* character spawn position and color*/
   width: 100px;
   height: 100px;
   background-color: orange;
@@ -233,7 +231,7 @@ body {
   margin-left: 30px;
 }
 
-@keyframes jump {
+@keyframes jump { /*keyframes added for the jump animation */
   0% {
     top: 300px;
   }
@@ -265,7 +263,7 @@ body {
   /* Back to original position */
 }
 
-@keyframes block {
+@keyframes block { /*keyframes added for the block moving animation */
   0% {
     left: 100%;
   }
@@ -275,13 +273,13 @@ body {
   }
 }
 
-.animate {
+.animate { /*animate class so that it is triggered by controls instead of doing it by default */
   animation: jump 500ms;
 }
 
 
 
-@media screen and (width > 800px) {
+@media screen and (width > 800px) { /* when the screen size is desktop*/
   nav ul li {
     display: inline;
   }
@@ -295,7 +293,7 @@ body {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {/* when the screen size is mobile*/
   nav ul li {
     display: block;
   }
@@ -327,7 +325,6 @@ body {
     min-height: 0px;
   }
 
-  /* Style the collapsible content. Note: hidden by default */
   .content p {
     font-size: 20px;
   }
