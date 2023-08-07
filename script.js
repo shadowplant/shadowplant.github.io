@@ -126,6 +126,7 @@ const controls = document.querySelector(".controls"); // Corrected selector
 controls.addEventListener("click", jump); 
 // Added event listener for click
 
+
 var checkdead = setInterval(function(){
     var characterTop = 
     parseInt(window.getComputedStyle(character).
